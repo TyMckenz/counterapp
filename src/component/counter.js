@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class counter extends Component {
+export class Counter extends Component {
     render() 
     {
         return (
@@ -50,4 +50,4 @@ export class counter extends Component {
 
 }
 
-export default counter
+export default Counter
