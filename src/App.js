@@ -1,9 +1,8 @@
 import './App.css';
 import React, { Component } from 'react';
-import Counter from './component/counter';
 import Counters from './component/counters';
 import NavBar from './component/navbar';
-import { render } from '@testing-library/react';
+
 
 class App extends Component {
     state = {
@@ -55,15 +54,17 @@ render() {
     return (
         <div className="App">
         <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length}></NavBar>
-        <main className="container">
-            <Counter
-                counters ={this.state.counters}
+        <main>
+            < Counters
+                counters={this.state.counters}
                 onReset={this.handleReset}
+                onRestart={this.handleRestart}
+                onDelete={this.handleDelete}
                 onIncrement={this.handleIncrement}
                 onDecrement={this.handleDecrement}
-                onDelete={this.handleDelete}
-                onRestart={this.handleRestart}
-            />
+                
+                />
+
         </main>
     </div>
     ); 
