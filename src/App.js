@@ -57,11 +57,11 @@ render() {
         <main>
             < Counters
                 counters={this.state.counters}
+                onIncrement={this.handleIncrement}
+                onDecrement={this.handleDecrement}
                 onReset={this.handleReset}
                 onRestart={this.handleRestart}
                 onDelete={this.handleDelete}
-                onIncrement={this.handleIncrement}
-                onDecrement={this.handleDecrement}
                 
                 />
 
